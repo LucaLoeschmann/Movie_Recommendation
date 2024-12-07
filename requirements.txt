@@ -1,4 +1,14 @@
-numpy==1.24.0
-scikit-learn==1.2.2
-streamlit==1.19.0
-pandas==1.5.0
+# Streamlit for building the web app
+streamlit>=1.16.0
+
+# NumPy for numerical computations (latest compatible version)
+numpy>=1.25.0
+
+# Other dependencies
+pandas>=1.5.0
+matplotlib>=3.7.0
+scipy>=1.9.0
+scikit-learn>=1.0.0
+
+# Install dependencies for better compatibility with Python 3.12
+python3-distutils
