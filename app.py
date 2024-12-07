@@ -5,13 +5,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 import altair as alt
 
-# Load data from GitHub
-def load_data_from_github():
-    # Define the raw URLs for your CSVs on GitHub
-    movies_url = "https://raw.githubusercontent.com/LucaLoeschmann/Mattscheibe/main/movies.csv"
-    ratings_url = "https://raw.githubusercontent.com/LucaLoeschmann/Mattscheibe/main/ratings.csv"
+# Load data from GitHub (now from local repo files)
+def load_data_from_repo():
+    # Use local paths to the CSV files within the 'data/' folder
+    movies_url = "data/movies.csv"
+    ratings_url = "data/ratings.csv"
 
-    # Load the CSV files from GitHub
+    # Load the CSV files from the 'data/' folder
     ratings = pd.read_csv(ratings_url, usecols=["userId", "movieId", "rating"])
     movies = pd.read_csv(movies_url, usecols=["movieId", "title", "genres"])
 
@@ -25,7 +25,7 @@ def load_data_from_github():
     return data, movies, genres_expanded  # Return genres_expanded along with other data
 
 # Load the data
-data, movies, genres_expanded = load_data_from_github()  # Now we have genres_expanded as well
+data, movies, genres_expanded = load_data_from_repo()  # Now we have genres_expanded as well
 
 # Create the user-item matrix (ratings for each user on each movie)
 user_item_matrix = data.pivot_table(index="userId", columns="title", values="rating")
