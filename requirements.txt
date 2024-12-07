@@ -10,5 +10,5 @@ matplotlib>=3.7.0
 scipy>=1.9.0
 scikit-learn>=1.0.0
 
-# Install dependencies for better compatibility with Python 3.12
-python3-distutils
+# Use setuptools instead of distutils (if needed for building extensions)
+setuptools>=67.0
