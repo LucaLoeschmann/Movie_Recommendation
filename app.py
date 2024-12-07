@@ -8,8 +8,8 @@ import altair as alt
 # Load data from GitHub
 def load_data_from_github():
     # Define the raw URLs for your CSVs on GitHub
-    movies_url = "https://raw.githubusercontent.com/LucaLoeschmann/d191874/main/movies.csv"
-    ratings_url = "https://raw.githubusercontent.com/LucaLoeschmann/d191874/main/ratings.csv"
+    movies_url = "https://raw.githubusercontent.com/LucaLoeschmann/Mattscheibe/main/movies.csv"
+    ratings_url = "https://raw.githubusercontent.com/LucaLoeschmann/Mattscheibe/main/ratings.csv"
 
     # Load the CSV files from GitHub
     ratings = pd.read_csv(ratings_url, usecols=["userId", "movieId", "rating"])
