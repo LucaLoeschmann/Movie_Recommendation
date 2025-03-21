@@ -106,8 +106,8 @@ if not filter_options:
 # If the user opts to filter
 if filter_options:
     st.sidebar.header("Filter Options")
-    min_avg_rating = st.sidebar.slider("Min average rating:", min_value=0.5, max_value=5.0, value=3.5, step=0.5)
-    min_num_ratings = st.sidebar.slider("Min number of ratings:", min_value=1, max_value=100, value=5, step=1)
+    min_avg_rating = st.sidebar.slider("Minimum average rating:", min_value=0.5, max_value=5.0, value=3.5, step=0.5)
+    min_num_ratings = st.sidebar.slider("Minimum number of ratings:", min_value=1, max_value=100, value=5, step=1)
     
     available_genres = genres_expanded['genres'].unique() # Now we have access to genres_expanded
     selected_genres = st.sidebar.multiselect("Choose Genre(s):", options=available_genres, default=available_genres)
