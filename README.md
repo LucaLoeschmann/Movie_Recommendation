@@ -1,6 +1,6 @@
 # 🎬 Movie Recommendation System
 
-## 🔗 Live App  
+## 🔗 Streamlit App  
 👉 [Click here to try the app](https://movie-recommendation-25.streamlit.app/)
 
 ## 🌟 Table of Contents
@@ -22,8 +22,6 @@ This Streamlit app is a content-based **movie recommendation system** using coll
 - Apply **filters** such as genre, minimum average rating, and number of ratings  
 - Explore **visualizations** of rating distributions
 
-The goal was to create an intuitive interface to explore how data science can enhance entertainment discovery, starting with a well-known dataset for prototyping and testing.
-
 ---
 
 ## 🔄 Data Pipeline & Preprocessing
@@ -32,9 +30,6 @@ The goal was to create an intuitive interface to explore how data science can en
 - Genres are extracted and expanded for filtering functionality
 - A **user-item matrix** is created (users as rows, movies as columns)
 - **Cosine similarity** is computed between movie vectors to find similar titles
-- Filters are applied on-the-fly based on user input (e.g., genre, min rating)
-
-The app also normalizes movie titles (ignoring years and casing) for more robust search matching.
 
 ---
 
@@ -50,10 +45,10 @@ The app also normalizes movie titles (ignoring years and casing) for more robust
 ### ⭐ Star Ratings
 - Each recommended title displays:
   - Average rating
-  - Visualized with emoji-based **star ratings**
+  - Visualized with full and half **star ratings**
 
 ### 📊 Rating Distribution Visualizer
-- Pick any movie and view its **rating frequency distribution** using Altair
+- Pick any movie and view its **rating frequency distribution** 
 
 ---
 
@@ -64,10 +59,8 @@ The app also normalizes movie titles (ignoring years and casing) for more robust
 - Recommendations are based on **collaborative filtering only** (not hybrid)
 - Deployment constraints limit the size of the dataset used in this demo
 
-### Future Plans
+### Future Improvements
 - Upgrade to the **full or latest MovieLens dataset** once deployment constraints allow
-- Add support for **content-based filtering** using NLP on movie descriptions
-- Include a hybrid model that combines content and collaborative data
 - Add user login and interaction tracking for **personalized recommendations**
 
 ---
